@@ -38,7 +38,6 @@ pip install -r requirement.txt
 
 ```
 python -m pip install setfit
-
 ```
 
 5. Start the server:

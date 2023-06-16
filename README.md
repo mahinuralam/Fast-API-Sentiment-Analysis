@@ -7,7 +7,7 @@ The machine learning model will provide a Sentiment Analysis of that Text as a r
 
 To run this project locally following things need to be installed.
 
-1. Python
+1. Python (3.9~)
 
 ## Follow these steps to set up the project:
 

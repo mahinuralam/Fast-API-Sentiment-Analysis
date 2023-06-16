@@ -54,7 +54,7 @@ The following routes are available in the API:
 
 - POST /analyze - Input a text.
 - GET /analyze - Get all text with sentiment response.
-- GET /analyze/id - Get a specific post by ID with a sentiment response.
+- GET /analyze/id - Get a specific text by ID with a sentiment response.
 - PUT /analyze/id - Update a text with sentiment analysis.
 - DELETE /analyze/id - Delete a text.
 

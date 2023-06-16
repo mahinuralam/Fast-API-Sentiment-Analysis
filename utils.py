@@ -18,6 +18,11 @@ def sentiment_analysis(text):
 
 
 def is_sentence(text: str) -> bool:
+    
+    # download nltk if its not install otherwise just execute
+    if not nltk:
+        nltk.download('punkt')
+        
     # Tokenize the text into sentences.
     sentences = nltk.sent_tokenize(text)
     # Check if there is at least one sentence.

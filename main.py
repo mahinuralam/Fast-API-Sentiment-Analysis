@@ -47,32 +47,42 @@ def create_analyze(analyze: schemas.AnalyzeCreate, session: Session = Depends(ge
 def get_analyze(id: int, session: Session = Depends(get_session)):
     analyze = session.query(models.Analyze).get(id)
     session.close()
+    
     if not analyze:
         raise HTTPException(status=404, detail=f"Analyze item with id {id} does not Exist")
+    
     return analyze
 
 
 @app.put('/analyze/{id}', response_model=schemas.Analyze)
 def update_analyze(id: int, analyze: schemas.AnalyzeCreate, session: Session = Depends(get_session)):
     get_db_data = session.query(models.Analyze).get(id)
+    
     if get_db_data:
         get_db_data.text = analyze.text
+        get_db_data.sentiment = sentiment_analysis(analyze.text)
         session.commit()
+        
     session.close()
+    
     if not get_db_data:
         raise HTTPException(status=404, detail=f"Analyze item with id {id} does not Exist")
+    
     return get_db_data
 
 
 @app.delete('/analyze/{id}', status_code=status.HTTP_204_NO_CONTENT)
 def delete_analyze(id: int, session: Session = Depends(get_session)):
     analyze = session.query(models.Analyze).get(id)
+    
     if analyze:
         session.delete(analyze)
         session.commit()
     session.close()
+    
     if not analyze:
         raise HTTPException(status=404, detail=f"Analyze item with id {id} does not Exist")
+    
     return None
 
 

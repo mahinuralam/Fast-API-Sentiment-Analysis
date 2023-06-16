@@ -52,11 +52,11 @@ uvicorn main:app --reload
 
 The following routes are available in the API:
 
-- POST /analyze - Create a new text.
+- POST /analyze - Input a text.
 - GET /analyze - Get all text with sentiment response.
-- GET /analyze/:id - Get a specific post by ID with a sentiment response.
-- PUT /analyze/:id - Update a post.
-- DELETE /analyze/:id - Delete a post.
+- GET /analyze/id - Get a specific post by ID with a sentiment response.
+- PUT /analyze/id - Update a text with sentiment analysis.
+- DELETE /analyze/id - Delete a text.
 
 Please refer to the source code and documentation for more details on the API routes and request/response formats.
 

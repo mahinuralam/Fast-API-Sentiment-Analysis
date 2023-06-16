@@ -14,7 +14,7 @@ To run this project locally following things need to be installed.
 1. Clone the repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/mahinuralam/Fast-API-Sentiment-Analysis
 ```
 
 2. Navigate to the project directory:

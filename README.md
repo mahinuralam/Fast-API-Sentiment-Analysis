@@ -1,4 +1,4 @@
-# Fast-Api-Sentiment-Analysis
+# Fast-API-Sentiment-Analysis
 
 In this project, A RESTful API is created along with Machine Learning. Where base on a Text the
 The machine learning model will provide a Sentiment Analysis of that Text as a response.
@@ -20,7 +20,7 @@ git clone https://github.com/mahinuralam/Fast-API-Sentiment-Analysis
 2. Navigate to the project directory:
 
 ```
-cd Fast-Api-Sentiment-Analysis
+cd Fast-API-Sentiment-Analysis
 ```
 
 3. Install the dependencies:
